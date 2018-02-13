@@ -43,3 +43,6 @@ RUN pushd /tmp/gpdb-5.4.1 && \
       make && \
       make install && \
     popd
+
+RUN yum install -y net-tools less openssh-clients iproute which && \
+    pip install paramiko psutil
